@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 学习</title>
+	<meta charset="utf-8">
+	<script src="js/jquery/3.2.0/jquery.js"></script>
+	<link href="css/bootstrap/3.3.7/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<button id="push" class="btn btn-default btn-primary">hello1</button>
+		<div class="starter-template">
+			<div id="info" class="info">
+				<h1>这是一条测试消息！</h1>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		$("#push").click(function(){
+			$("#info").toggle();
+		});
+	</script>
+</body>
+</html>
