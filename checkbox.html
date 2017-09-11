@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 学习 checkbox</title>
+	<meta charset="utf-8">
+	<script src="js/jquery/3.2.0/jquery.js"></script>
+	<link href="css/bootstrap/3.3.7/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<div id="count">0</div>
+		<input type="checkbox" name="mybox" value="1" uidCount="100"> 加 100 人</input></br>
+		<input type="checkbox" name="mybox" value="2" uidCount="200"> 加 200 人 </input></br>
+		<input type="checkbox" name="mybox" value="3" uidCount="300"> 加 300 人 </input></br>
+	</div>
+
+
+	<script type="text/javascript">
+		$("input[name='mybox']").change(function(){
+			var count = 0;
+			$("input[name='mybox']").each(function() {
+				if($(this).is(":checked")) {
+					count += parseInt($(this).attr("uidCount"));
+				}
+			});
+			$("#count").html(count);
+		});
+	</script>
+</body>
+</html>
