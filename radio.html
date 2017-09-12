@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 学习 radio</title>
+	<meta charset="utf-8">
+	<script src="js/jquery/3.2.1/jquery-3.2.1.js"></script>
+	<link href="css/3.3.7/bootstrap.css" rel="stylesheet"/>
+	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet"/>
+	
+</head>
+<body>
+	<div class="container">
+		<form role="form">
+			<p style="margin-top: 10px;">
+				推送人数：<span class="badge" id="count">0</span>
+			</p>
+			<div class="radio radio-primary">
+				<input class="radio" id="radio1" type="radio" name="mybox" value="1" uidCount="100"/>
+				<label for="radio1">加 100 人</label></br>
+				<input class="radio" id="radio2" type="radio" name="mybox" value="1" uidCount="200"/>
+				<label for="radio2">加 200 人</label></br>
+				<input class="radio" id="radio3" type="radio" name="mybox" value="1" uidCount="300"/>
+				<label for="checkbox3">加 300 人</label></br>
+			</div>
+		</form>
+	</div>
+
+	<!-- 脚本开始 -->
+	<script type="text/javascript">
+		$("input[name='mybox']").change(function(){
+			var count = 0;
+			$("input[name='mybox']").each(function() {
+				if($(this).is(":checked")) {
+					count += parseInt($(this).attr("uidCount"));
+				}
+			});
+			$("#count").html(count);
+		});
+	</script>
+	<!-- 脚本结束 -->
+</body>
+</html>

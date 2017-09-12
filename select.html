@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 学习 select</title>
+	<meta charset="utf-8">
+	<script src="js/jquery/3.2.1/jquery-3.2.1.js"></script>
+	<link href="css/3.3.7/bootstrap.css" rel="stylesheet"/>
+	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet"/>
+	
+</head>
+<body>
+	<div class="container">
+		<form role="form">
+			<p style="margin-top: 10px;">
+				推送人数：<span class="badge" id="count">0</span>
+			</p>
+			<div class="select select-primary">
+				<select id="select1">
+				<option uidCount="100">100</option>
+				<option uidCount="200">200</option>
+				</select>
+			</div>
+		</form>
+	</div>
+
+	<!-- 脚本开始 -->
+	<script type="text/javascript">
+		$("#select1").change(function(){
+			var count = 0;
+			var a = $("#select1").find("option:selected").attr("uidCount");
+			count += parseInt(a);
+			$("#count").html(count);
+		});
+	</script>
+	<!-- 脚本结束 -->
+</body>
+</html>
