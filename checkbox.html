@@ -5,20 +5,29 @@
 	<title>CSS 学习 checkbox</title>
 	<meta charset="utf-8">
 	<script src="js/jquery/3.2.1/jquery-3.2.1.js"></script>
-	<link href="css/3.3.7/bootstrap.css" rel="stylesheet">
-	<link href="css/3.3.7/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/3.3.7/bootstrap.css" rel="stylesheet"/>
+	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet"/>
+	
 </head>
 <body>
 	<div class="container">
-		
-		<label class="warning" id="count">0</label></br>
-		
-		<input type="checkbox" name="mybox" value="1" uidCount="100"> 加 100 人</input></br>
-		<input type="checkbox" name="mybox" value="2" uidCount="200"> 加 200 人 </input></br>
-		<input type="checkbox" name="mybox" value="3" uidCount="300"> 加 300 人 </input></br>
+		<form role="form">
+			<p style="margin-top: 10px;">
+				推送人数：<span class="badge" id="count">0</span>
+			</p>
+			<div class="checkbox checkbox-primary">
+				<input class="checkbox" id="checkbox1" type="checkbox" name="mybox" value="1" uidCount="100"/>
+				<label for="checkbox1">加 100 人</label></br>
+				<input class="checkbox" id="checkbox2" type="checkbox" name="mybox" value="1" uidCount="200"/>
+				<label for="checkbox2">加 200 人</label></br>
+				<input class="checkbox" id="checkbox3" type="checkbox" name="mybox" value="1" uidCount="300"/>
+				<label for="checkbox3">加 300 人</label></br>
+			</div>
+		</form>
 	</div>
 
-
+	<!-- 脚本开始 -->
 	<script type="text/javascript">
 		$("input[name='mybox']").change(function(){
 			var count = 0;
@@ -30,5 +39,6 @@
 			$("#count").html(count);
 		});
 	</script>
+	<!-- 脚本结束 -->
 </body>
 </html>

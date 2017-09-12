@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 学习 temp</title>
+	<meta charset="utf-8">
+	<script src="js/jquery/3.2.1/jquery-3.2.1.js"></script>
+	<link href="css/3.3.7/bootstrap.css" rel="stylesheet">
+	<link href="css/3.3.7/bootstrap-theme.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		</br>
+		<code>hello</code>
+	</div>
+
+
+	<script type="text/javascript">
+		$("input[name='mybox']").change(function(){
+			var count = 0;
+			$("input[name='mybox']").each(function() {
+				if($(this).is(":checked")) {
+					count += parseInt($(this).attr("uidCount"));
+				}
+			});
+			$("#count").html(count);
+		});
+	</script>
+</body>
+</html>
